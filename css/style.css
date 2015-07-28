@@ -113,7 +113,7 @@ body {
 	top: 0px;
 }
 
-#link-text {
+.link-text {
 	margin-bottom: 5px;
 	font-size: 15pt;
 	font-weight: bold;
@@ -121,7 +121,7 @@ body {
 	color: white;
 }
 
-#link-image {
+.link-image {
 	height: 30px;
 	width: 30px;
 	margin-right: 10px;
