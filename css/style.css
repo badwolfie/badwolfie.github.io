@@ -194,9 +194,9 @@ hr {
 	height: 25px;
 }
 
-img.fab:hover {
-	width: 101%;
-	height: 101%;
+img#fab:hover {
+	width: 27px;
+	height: 27px;
 }
 
 .card {
