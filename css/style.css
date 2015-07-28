@@ -71,20 +71,61 @@ body {
 	font-style: italic;
 }
 
-#gh-project {
+#gh-project-link {
 	background-color: #27B893;
 	box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 5px 0px;
 	position: absolute;
+	background-image: url("../img/brand/GitHub-Mark-Mini.png");
+	background-repeat: no-repeat;
+	background-position: 95% 50%;
 	padding: 10px 50px 10px 15px;
 	font-size: 15pt;
-	color: white;
 	font-weight: bold;
-	background-image: url("../img/brand/GitHub-Mark-Mini.png");
-	background-position: 95% 50%;
-	background-repeat: no-repeat;
 	display: block;
-	top: 0px;
+	color: white;
 	right: 0px;
+	top: 0px;
+}
+
+#gl-project-link {
+	background-color: #27B893;
+	box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 5px 0px;
+	position: absolute;
+	background-image: url("../img/brand/GitLab-Mark-Mini.png");
+	background-repeat: no-repeat;
+	background-position: 95% 50%;
+	padding: 10px 50px 10px 15px;
+	font-size: 15pt;
+	font-weight: bold;
+	display: block;
+	color: white;
+	right: 0px;
+	top: 0px;
+}
+
+#project-links-wrapper {
+	background-color: #27B893;
+	box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 5px 0px;
+	position: absolute;
+	padding: 5px 20px 0px 20px;
+	display: block;
+	right: 0px;
+	top: 0px;
+}
+
+#link-text {
+	margin-bottom: 5px;
+	font-size: 15pt;
+	font-weight: bold;
+	display: block;
+	color: white;
+}
+
+#link-image {
+	height: 30px;
+	width: 30px;
+	margin-right: 10px;
+	margin-left: 10px;
 }
 
 a {
