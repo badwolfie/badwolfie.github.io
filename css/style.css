@@ -55,7 +55,7 @@
 }
 
 body {
-	font-family: "Fira Sans" Georgia serif;
+	font-family: "Fira Sans", Georgia, serif;
 	background-color: #F0F0F0;
 	font-size: 13pt;
 	width: 100%;
