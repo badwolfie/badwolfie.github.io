@@ -50,7 +50,8 @@
 
 @font-face {
 	font-family: "Fira Sans"
-	src: url("font/FiraSans-Regular.otf");
+	/* src: url("font/FiraSans-Regular.otf"); */
+	src: url("https://github.com/mozilla/Fira/raw/master/otf/FiraSans-Regular.otf")
 }
 
 body {
