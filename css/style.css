@@ -58,6 +58,10 @@ body {
 	right: 20px;
 }
 
+table {
+	max-width: 90%;
+}
+
 #project-title {
 	font-weight: bold;
 	font-size: 30pt;
@@ -158,6 +162,11 @@ td {
 td.desc {
 	padding: 5px 20px 25px 0;
 	color: #5f5f5f;
+}
+
+td.dates {
+	text-align: center;
+	width: 15%;
 }
 
 /*#qt-header {
