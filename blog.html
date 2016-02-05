@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>Blog &mdash; Ian Hernández</title>
+  <link rel=stylesheet href="css/style.css" type="text/css"/>
+</head>
+
+<script type="text/javascript">
+  var currentPage = 1,
+      entrysPerPage = 5;
+
+  var objJson = [
+    { post: {
+        title: "Titulo 1",
+        content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+        date: "February 4, 2016",
+        number: 1
+      }
+    },
+    { post: {
+        title: "Titulo 2",
+        content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+        date: "February 4, 2016",
+        number: 2
+      }
+    },
+    { post: {
+        title: "Titulo 3",
+        content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+        date: "February 4, 2016",
+        number: 3
+      }
+    },
+    { post: {
+        title: "Titulo 4",
+        content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+        date: "February 4, 2016",
+        number: 4
+      }
+    },
+    { post: {
+        title: "Titulo 5",
+        content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+        date: "February 4, 2016",
+        number: 5
+      }
+    },
+    { post: {
+        title: "Titulo 6",
+        content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+        date: "February 4, 2016",
+        number: 6
+      }
+    },
+    { post: {
+        title: "Titulo 7",
+        content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+        date: "February 4, 2016",
+        number: 7
+      }
+    }
+  ];
+
+  function prevPage () {
+    if (currentPage > 1) {
+      currentPage--;
+      changePage (currentPage);
+    }
+  }
+
+  function nextPage () {
+    if (currentPage < numPages ()) {
+      currentPage++;
+      changePage (currentPage);
+    }
+  }
+
+  function changePage (page) {
+    var prevPageButton = document.getElementById ('prev-page');
+    var nextPageButton = document.getElementById ('next-page');
+    var entryList = document.getElementById ('entry-list');
+
+    page = page < 1? 1: page > numPages ()? numPages: page;
+    entryList.innerHTML = '';
+
+    var newEntry, newEntryContent, newEntryFooter, newEntryTitle;
+    for (var i = (page - 1) * entrysPerPage; i < (page * entrysPerPage); i++) {
+      newEntry = document.createElement ('div');
+      newEntry.setAttribute ('class', 'blog-entry');
+
+      newEntryContent = document.createElement ('div');
+      newEntryContent.setAttribute ('class', 'blog-entry-content');
+
+      newEntryFooter = document.createElement ('div');
+      newEntryFooter.setAttribute ('class', 'blog-entry-footer');
+      newEntryFooter.innerHTML = 'Posted: ' + objJson[i].post.date;
+
+      newEntryTitle = document.createElement ('h1');
+      newEntryTitle.innerHTML = objJson[i].post.title;
+
+      newEntryContent.appendChild (newEntryTitle);
+      newEntryContent.innerHTML += objJson[i].post.content;
+
+      newEntry.appendChild (newEntryContent);
+      newEntry.appendChild (newEntryFooter);
+
+      entryList.appendChild (newEntry);
+    }
+
+    if (page == 1) {
+      prevPageButton.disabled = true;
+    } else {
+      prevPageButton.disabled = false;
+    }
+
+    if (page == numPages ()) {
+      nextPageButton.disabled = true;
+    } else {
+      nextPageButton.disabled = false;
+    }
+  }
+
+  function numPages () {
+    return Math.ceil (objJson.length / entrysPerPage);
+  }
+
+  window.onload = function () {
+    changePage (1);
+  }
+</script>
+
+<body id="top">
+  <div class="header">
+    <div>
+      <a class="shortcut" href="about.html">About</a>
+      <a class="shortcut" href="projects.html">Projects</a>
+      <a class="shortcut" id="current-shortcut" href="blog.html">Blog</a>
+
+      <div style="display: inline-block; padding: 5px 0; margin-left: 7px;">
+        <a class="social-link" target="_blank" href="https://twitter.com/_badwolfie">
+          <img class="social-logo" src="img/brand/twitter.svg"/>
+        </a>
+
+        <a class="social-link" target="_blank" href="https://github.com/badwolfie">
+          <img class="social-logo" src="img/brand/github.svg"/>
+        </a>
+
+        <a class="social-link" target="_blank" href="https://linkedin.com/in/ihernandezs">
+          <img class="social-logo" src="img/brand/linkedin.svg"/>
+        </a>
+
+        <a class="social-link" href="mailto:ihernandezs@openmailbox.org">
+          <img class="social-logo" src="img/misc/mail.svg"/>
+        </a>
+      </div>
+    </div>
+    <a href="index.html">
+      <img class="mini-profile-pic" src="https://secure.gravatar.com/avatar/70124b8a96cba2ff1327d3d07e66dea7?s=400&d=identicon"/>
+    </a>
+    <span style="clear: both;"/>
+  </div>
+
+  <center>
+  <div class="inner-wrapper" align="center">
+    <div id="entry-list"></div>
+    <!--<div class="blog-entry">
+      <div class="blog-entry-content">
+        <h1>Título</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+
+      <div class="blog-entry-footer">
+        Fecha y otros datos.
+      </div>
+    </div>-->
+
+    <div align="center">
+      <ul class="pagination">
+        <li><a href="#" onclick="javascript:prevPage()" id="prev-page">&laquo;</a></li>
+        <li><a href="#" onclick="javascript:nextPage()" id="next-page">&raquo;</a></li>
+      </ul>
+    </div>
+  </div>
+  </center>
+
+  <div class="footer">
+    <span style="float: left; margin-left: 10%;">
+      Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>
+    </span>
+
+    <span style="float: right; margin-right: 10%;">
+      Copyright &copy; 2016 Ian Hern&aacute;ndez | <a target="_blank" title="The information on this site is licensed under the GNU GPL version 3." href="LICENSE">License</a>
+    </span>
+
+    <br style="clear: both;"/>
+  </div>
+</body>
+</html>
