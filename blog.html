@@ -8,52 +8,8 @@
 
 <script type="text/javascript">
   var currentPage = 1,
-      entrysPerPage = 5;
-
-  var objJson = [
-    {
-      title: "Titulo 1",
-      content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-      date: "February 4, 2016",
-      number: 1
-    },
-    {
-      title: "Titulo 2",
-      content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-      date: "February 4, 2016",
-      number: 2
-    },
-    {
-      title: "Titulo 3",
-      content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-      date: "February 4, 2016",
-      number: 3
-    },
-    {
-      title: "Titulo 4",
-      content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-      date: "February 4, 2016",
-      number: 4
-    },
-    {
-      title: "Titulo 5",
-      content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-      date: "February 4, 2016",
-      number: 5
-    },
-    {
-      title: "Titulo 6",
-      content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-      date: "February 4, 2016",
-      number: 6
-    },
-    {
-      title: "Titulo 7",
-      content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-      date: "February 4, 2016",
-      number: 7
-    }
-  ];
+      entrysPerPage = 5,
+      objJson;
 
   function prevPage () {
     if (currentPage > 1) {
@@ -74,31 +30,36 @@
     var nextPageButton = document.getElementById ('next-page');
     var entryList = document.getElementById ('entry-list');
 
-    page = page < 1? 1: page > numPages ()? numPages: page;
     entryList.innerHTML = '';
 
-    var newEntry, newEntryContent, newEntryFooter, newEntryTitle;
-    for (var i = (page - 1) * entrysPerPage; i < (page * entrysPerPage); i++) {
-      newEntry = document.createElement ('div');
-      newEntry.setAttribute ('class', 'blog-entry');
+    if (numPages () == 0) {
+      entryList.innerHTML = '<center><h1>No entries available.</h1></center>';
+    } else {
+      page = page < 1? 1: page > numPages ()? numPages: page;
+      var newEntry, newEntryContent, newEntryFooter, newEntryTitle;
+      for (var i = (page - 1) * entrysPerPage; i < (page * entrysPerPage); i++) {
+        newEntry = document.createElement ('div');
+        newEntry.setAttribute ('class', 'blog-entry');
 
-      newEntryContent = document.createElement ('div');
-      newEntryContent.setAttribute ('class', 'blog-entry-content');
+        newEntryContent = document.createElement ('div');
+        newEntryContent.setAttribute ('class', 'blog-entry-content');
 
-      newEntryFooter = document.createElement ('div');
-      newEntryFooter.setAttribute ('class', 'blog-entry-footer');
-      newEntryFooter.innerHTML = 'Posted: ' + objJson[i].date;
+        newEntryFooter = document.createElement ('div');
+        newEntryFooter.setAttribute ('class', 'blog-entry-footer');
+        newEntryFooter.innerHTML = '<img class="blog-entry-footer-icon" src="img/misc/calendar.svg"/> ' + objJson[i].date + '&nbsp;&nbsp;&nbsp;';
+        newEntryFooter.innerHTML += '&nbsp;&nbsp;&nbsp;<img class="blog-entry-footer-icon" src="img/misc/author.svg"/> Ian Hernández';
 
-      newEntryTitle = document.createElement ('h1');
-      newEntryTitle.innerHTML = objJson[i].title;
+        newEntryTitle = document.createElement ('h1');
+        newEntryTitle.innerHTML = objJson[i].title;
 
-      newEntryContent.appendChild (newEntryTitle);
-      newEntryContent.innerHTML += objJson[i].content;
+        newEntryContent.appendChild (newEntryTitle);
+        newEntryContent.innerHTML += objJson[i].content;
 
-      newEntry.appendChild (newEntryContent);
-      newEntry.appendChild (newEntryFooter);
+        newEntry.appendChild (newEntryContent);
+        newEntry.appendChild (newEntryFooter);
 
-      entryList.appendChild (newEntry);
+        entryList.appendChild (newEntry);
+      }
     }
 
     if (page == 1) {
@@ -118,12 +79,29 @@
     return Math.ceil (objJson.length / entrysPerPage);
   }
 
+  function readFile (file) {
+    var rawFile = new XMLHttpRequest ();
+    rawFile.open ('GET', file, false);
+    rawFile.onreadystatechange = function () {
+      if (rawFile.readyState === 4) {
+        if (rawFile.status === 200 || rawFile.status == 0) {
+          var allText = rawFile.responseText;
+          objJson = JSON.parse (allText);
+        }
+      }
+    }
+
+    rawFile.send (null);
+  }
+
   window.onload = function () {
+    readFile ('entries.json');
     changePage (1);
   }
 </script>
 
 <body id="top">
+<div class="outer-wrapper">
   <div class="header">
     <div>
       <a class="shortcut" href="about.html">About</a>
@@ -177,5 +155,6 @@
 
     <br style="clear: both;"/>
   </div>
+</div>
 </body>
 </html>

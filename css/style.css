@@ -1,15 +1,17 @@
-html {
-	height: 100%;
-}
-
 body {
 	font-family: "Fira Sans", Helvetica, sans-serif;
 	background-color: #f1f1f1;
-	color: #2e2e2e;
 	font-size: 13pt;
+	color: #2e2e2e;
+
 	height: 100%;
 	width: 100%;
 	margin: 0;
+}
+
+.outer-wrapper {
+	min-height: 100%;
+	position: relative;
 }
 
 .center-box-wrapper {
@@ -133,7 +135,8 @@ a#current-shortcut {
 	text-align: justify;
 	margin: 5% 0 0 0;
 	max-width: 80%;
-	padding: 5%;
+	padding: 5% 0 2% 0;
+	height: 100%;
 }
 
 hr {
@@ -212,6 +215,12 @@ td.dates {
 	padding: 30px 8%;
 	background-color: #f7f7f7;
 	color: #5f5f5f;
+}
+
+img.blog-entry-footer-icon {
+	display: inline-block;
+	width: 13pt;
+	height: 13pt;
 }
 
 ul.pagination {
