@@ -34,6 +34,8 @@
 
     if (numPages () == 0) {
       entryList.innerHTML = '<center><h1>No entries available.</h1></center>';
+      entryList.innerHTML +='<p class="centered">Comming soon...</p>';
+      entryList.innerHTML +='<div id="blog-entry-placeholder"></div>';
     } else {
       page = page < 1? 1: page > numPages ()? numPages: page;
       var newEntry, newEntryContent, newEntryFooter, newEntryTitle;

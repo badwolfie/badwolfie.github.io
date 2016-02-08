@@ -221,6 +221,10 @@ td.dates {
 	color: #5f5f5f;
 }
 
+#blog-entry-placeholder {
+	height: 320px;
+}
+
 img.blog-entry-footer-icon {
 	display: inline-block;
 	width: 13pt;
