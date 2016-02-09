@@ -30,6 +30,7 @@
     var nextPageButton = document.getElementById ('next-page');
     var entryList = document.getElementById ('entry-list');
 
+    currentPage = currentPage !== page? page: currentPage;
     entryList.innerHTML = '';
 
     if (numPages () == 0) {
@@ -40,6 +41,7 @@
       page = page < 1? 1: page > numPages ()? numPages: page;
       var newEntry, newEntryContent, newEntryFooter, newEntryTitle;
       for (var i = (page - 1) * entrysPerPage; i < (page * entrysPerPage); i++) {
+        if (i == objJson.length) break;
         newEntry = document.createElement ('div');
         newEntry.setAttribute ('class', 'blog-entry');
 
@@ -62,6 +64,16 @@
 
         entryList.appendChild (newEntry);
       }
+
+      var currentLink;
+      for (var i = 1; i <= numPages (); i++) {
+        currentLink = document.getElementById ('blog-pages').childNodes[i].childNodes[0];
+        if (i === page)
+          currentLink.setAttribute ('class', 'active');
+        else
+          currentLink.removeAttribute ('class');
+
+      }
     }
 
     if (page == 1) {
@@ -75,6 +87,47 @@
     } else {
       nextPageButton.disabled = false;
     }
+  }
+
+  function numeratePages () {
+    var paginator = document.getElementById ('blog-pages');
+    var _numPages = numPages ();
+    var  pageItem, pageLink;
+
+    pageItem = document.createElement ('li');
+    pageLink = document.createElement ('a');
+    pageItem.appendChild (pageLink);
+
+    pageLink.setAttribute ('onclick', 'javascript:prevPage()');
+    pageLink.setAttribute ('id', 'prev-page');
+    pageLink.setAttribute ('href', '#');
+    pageLink.innerHTML = '&laquo;';
+
+    paginator.appendChild (pageItem);
+
+    for (var i = 1; i <= _numPages; i++) {
+      pageItem = document.createElement ('li');
+      pageLink = document.createElement ('a');
+      pageItem.appendChild (pageLink);
+
+      pageLink.setAttribute ('onclick', 'javascript:changePage(' + i + ')');
+      // pageLink.setAttribute ('id', 'page-' + i);
+      pageLink.setAttribute ('href', '#');
+      pageLink.innerHTML = '' + i;
+
+      paginator.insertBefore (pageItem, paginator.childNodes[i + 1]);
+    }
+
+    pageItem = document.createElement ('li');
+    pageLink = document.createElement ('a');
+    pageItem.appendChild (pageLink);
+
+    pageLink.setAttribute ('onclick', 'javascript:nextPage()');
+    pageLink.setAttribute ('id', 'next-page');
+    pageLink.setAttribute ('href', '#');
+    pageLink.innerHTML = '&raquo;';
+
+    paginator.appendChild (pageItem);
   }
 
   function numPages () {
@@ -98,6 +151,7 @@
 
   window.onload = function () {
     readFile ('entries.json');
+    numeratePages ();
     changePage (1);
   }
 </script>
@@ -138,10 +192,7 @@
   <div class="inner-wrapper" align="center">
     <div id="entry-list"></div>
     <div align="center">
-      <ul class="pagination">
-        <li><a href="#" onclick="javascript:prevPage()" id="prev-page">&laquo;</a></li>
-        <li><a href="#" onclick="javascript:nextPage()" id="next-page">&raquo;</a></li>
-      </ul>
+      <ul class="pagination" id="blog-pages"></ul>
     </div>
   </div>
   </center>
