@@ -94,40 +94,41 @@
     var _numPages = numPages ();
     var  pageItem, pageLink;
 
-    pageItem = document.createElement ('li');
-    pageLink = document.createElement ('a');
-    pageItem.appendChild (pageLink);
-
-    pageLink.setAttribute ('onclick', 'javascript:prevPage()');
-    pageLink.setAttribute ('id', 'prev-page');
-    pageLink.setAttribute ('href', '#');
-    pageLink.innerHTML = '&laquo;';
-
-    paginator.appendChild (pageItem);
-
-    for (var i = 1; i <= _numPages; i++) {
+    if (_numPages !== 0) {
       pageItem = document.createElement ('li');
       pageLink = document.createElement ('a');
       pageItem.appendChild (pageLink);
 
-      pageLink.setAttribute ('onclick', 'javascript:changePage(' + i + ')');
-      // pageLink.setAttribute ('id', 'page-' + i);
+      pageLink.setAttribute ('onclick', 'javascript:prevPage()');
+      pageLink.setAttribute ('id', 'prev-page');
       pageLink.setAttribute ('href', '#');
-      pageLink.innerHTML = '' + i;
+      pageLink.innerHTML = '&laquo;';
 
-      paginator.insertBefore (pageItem, paginator.childNodes[i + 1]);
+      paginator.appendChild (pageItem);
+
+      for (var i = 1; i <= _numPages; i++) {
+        pageItem = document.createElement ('li');
+        pageLink = document.createElement ('a');
+        pageItem.appendChild (pageLink);
+
+        pageLink.setAttribute ('onclick', 'javascript:changePage(' + i + ')');
+        pageLink.setAttribute ('href', '#');
+        pageLink.innerHTML = '' + i;
+
+        paginator.insertBefore (pageItem, paginator.childNodes[i + 1]);
+      }
+
+      pageItem = document.createElement ('li');
+      pageLink = document.createElement ('a');
+      pageItem.appendChild (pageLink);
+
+      pageLink.setAttribute ('onclick', 'javascript:nextPage()');
+      pageLink.setAttribute ('id', 'next-page');
+      pageLink.setAttribute ('href', '#');
+      pageLink.innerHTML = '&raquo;';
+
+      paginator.appendChild (pageItem);
     }
-
-    pageItem = document.createElement ('li');
-    pageLink = document.createElement ('a');
-    pageItem.appendChild (pageLink);
-
-    pageLink.setAttribute ('onclick', 'javascript:nextPage()');
-    pageLink.setAttribute ('id', 'next-page');
-    pageLink.setAttribute ('href', '#');
-    pageLink.innerHTML = '&raquo;';
-
-    paginator.appendChild (pageItem);
   }
 
   function numPages () {
