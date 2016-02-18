@@ -278,6 +278,7 @@ pre {
 	border: 1px solid #ddd;
 	font-size: 11pt;
 	color: #27b893;
+	overflow: auto;
 	padding: 25px;
 }
 
