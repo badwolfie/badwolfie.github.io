@@ -295,8 +295,12 @@ sup {
 	border-radius: 10px;
 }
 
-.thumbnail {
+img.thumbnail {
 	width: 300px;
+	display: inline-block;
+}
+
+a.thumbnail {
 	display: inline-block;
 }
 
