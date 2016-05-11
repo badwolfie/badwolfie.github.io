@@ -200,6 +200,13 @@ td.dates {
 	width: 15%;
 }
 
+.project-thumbnail {
+	width: 400px;
+	margin: 0 30px 0 0;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px 0px;
+	border-radius: 3px;
+}
+
 .footer {
 	background-color: #2e2e2e;
 	padding: 15pt 0 20pt 0;
