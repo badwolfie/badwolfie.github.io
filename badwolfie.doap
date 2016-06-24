@@ -3,12 +3,16 @@
          xmlns:foaf="http://xmlns.com/foaf/0.1/"
          xmlns="http://usefulinc.com/ns/doap#">
     <name xml:lang="en">badwolfie's dev page</name>
+
     <shortdesc xml:lang="en">badwolfie's developer web page on GitHub.</shortdesc>
+
     <description>Official web page for developer badwolfie, hosted by GitHub.</description>
+    
     <homepage rdf:resource="http://badwolfie.github.io" />
     <license rdf:resource="http://spdx.org/licenses/GPL-2.0+" />
 
     <programming-language>HTML</programming-language>
+    <programming-language>JavaScript</programming-language>
     <programming-language>CSS</programming-language>
 
     <maintainer>
