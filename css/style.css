@@ -123,13 +123,15 @@ table {
 }
 
 #project-title {
+	color: #2e2e2e;
 	font-weight: bold;
 	font-size: 30pt;
 }
 
 #shortdesc {
-	font-size: 13pt;
+	color: #2e2e2e;
 	font-style: italic;
+	font-size: 13pt;
 }
 
 .social-logo {
