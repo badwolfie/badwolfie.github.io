@@ -62,7 +62,7 @@ main {
 	margin-top: 50px;
 	box-sizing: border-box;
 	box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px 0px;
-	padding: 40px 65px 10px 65px;
+	padding: 40px 65px 15px 65px;
 }
 
 .profile-header {
@@ -79,7 +79,7 @@ main {
 	height: 130px;
 	width: 130px;
 	margin: 0 auto;
-	margin-top: -100px;
+	margin-top: -109px;
 	margin-bottom: 20px;
 	vertical-align: baseline;
 	text-align: center;
@@ -106,7 +106,7 @@ main {
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
-	padding: 20px;
+	padding: 0 20px 0 20px;
 }
 
 .mini-profile-pic {
@@ -116,10 +116,6 @@ main {
 	position: absolute;
 	top: 20%;
 	right: 7.5%;
-}
-
-.outer-wrapper {
-	min-height: 100%;
 }
 
 table {
@@ -215,7 +211,7 @@ a#current-shortcut {
 
 .inner-wrapper {
 	text-align: justify;
-	margin: 5% 0 0 0;
+	margin: 100px 0 0 0;
 	max-width: 80%;
 	padding: 5% 0 2% 0;
 	height: 100%;
@@ -291,9 +287,13 @@ td.dates {
 	width: 100%;
 }
 
+#entry-list {
+	margin-bottom: 40px;
+}
+
 .blog-entry {
 	box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 1px 0px;
-	margin-bottom: 70px;
+	margin-bottom: 10px;
 }
 
 .blog-entry-content {
