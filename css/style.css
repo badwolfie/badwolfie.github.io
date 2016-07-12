@@ -1,3 +1,5 @@
+/* Características globales */
+
 html {
 	margin: 0;
 	padding: 0;
@@ -9,7 +11,6 @@ html {
 body {
 	font-family: "Fira Sans", Helvetica, sans-serif;
 	background-color: #f1f1f1;
-	font-size: 13pt;
 	color: #2e2e2e;
 	margin: 0;
 }
@@ -88,7 +89,7 @@ main {
 .profile-pic {
 	height: 130px;
 	width: 130px;
-	background-image: url("https://secure.gravatar.com/avatar/70124b8a96cba2ff1327d3d07e66dea7?s=400&d=identicon");
+	background-image: url("https://ssecure.gravatar.com/avatar/70124b8a96cba2ff1327d3d07e66dea7?s=400&d=identicon");
 	background-size: cover;
 	border-radius: 100%;
 	background-repeat: no-repeat;
@@ -125,13 +126,11 @@ table {
 #project-title {
 	color: #2e2e2e;
 	font-weight: bold;
-	font-size: 30pt;
 }
 
 #shortdesc {
 	color: #2e2e2e;
 	font-style: italic;
-	font-size: 13pt;
 }
 
 .social-logo {
@@ -156,7 +155,6 @@ a.see-more {
 	font-variant: small-caps;
 	color: #fafafa;
 	padding: 7px 20px;
-	font-size: 17px;
 	display: inline-block;
 }
 
@@ -197,7 +195,6 @@ p.centered {
 
 a.shortcut {
 	font-variant: small-caps;
-	font-size: 15pt;
 	color: #2e2e2e;
 	margin-left: 15px;
 }
@@ -230,21 +227,15 @@ hr {
 
 h1 {
 	color: #2e2e2e;
-	font-size: 30pt;
-	padding-bottom: 20pt;
 }
 
 h2 {
 	color: #27b893;
-	font-size: 17pt;
-	padding-top: 25pt;
 }
 
 h3 {
 	color: #27b893;
-	font-size: 13pt;
 	font-style: italic;
-	padding-top: 25pt;
 }
 
 .header {
@@ -284,9 +275,12 @@ td.dates {
 	background-color: #2e2e2e;
 	padding: 15pt 0 20pt 0;
 	text-align: center;
-	font-size: 11pt;
 	color: white;
 	width: 100%;
+}
+
+.inner-footer {
+	margin: 0 10% 0 10%;
 }
 
 #entry-list {
@@ -316,8 +310,6 @@ td.dates {
 
 img.blog-entry-footer-icon {
 	display: inline-block;
-	width: 13pt;
-	height: 13pt;
 }
 
 ul.pagination {
@@ -352,7 +344,6 @@ pre {
 	font-family: "Fira Mono", monospace;
 	background-color: #fafafa;
 	border: 1px solid #ddd;
-	font-size: 11pt;
 	color: #27b893;
 	overflow: auto;
 	padding: 25px;
@@ -362,3 +353,99 @@ sup {
 	font-size: 75%;
 }
 
+/* For desktop */
+@media (min-width: 700px) {
+    body, #shortdesc, a.see-more {
+        font-size: 13pt;
+    }
+    
+    #project-title {
+        font-size: 30pt;
+    }
+    
+    h1 {
+        font-size: 30pt;
+        padding-bottom: 20pt;
+    }
+
+    h2 {
+        font-size: 17pt;
+        padding-top: 25pt;
+    }
+
+    h3 {
+        font-size: 13pt;
+        padding-top: 25pt;
+    }
+    
+    pre {
+        font-size: 11pt;
+    }
+    
+    img.blog-entry-footer-icon {
+        width: 13pt;
+        height: 13pt;
+    }
+    
+    a.shortcut {
+	   font-size: 15pt;
+    }
+    
+    .footer {
+        font-size: 11pt;
+    }
+}
+
+/* For portrait-mode devices */
+@media (orientation: portrait) {
+    body, #shortdesc, a.see-more {
+        font-size: 23pt;
+    }
+    
+    #project-title {
+        font-size: 40pt;
+    }
+    
+    h1 {
+        font-size: 40pt;
+        padding-bottom: 30pt;
+    }
+
+    h2 {
+        font-size: 27pt;
+        padding-top: 35pt;
+    }
+
+    h3 {
+        font-size: 23pt;
+        padding-top: 35pt;
+    }
+    
+    pre {
+        font-size: 21pt;
+    }
+    
+    img.blog-entry-footer-icon {
+        width: 23pt;
+        height: 23pt;
+    }
+    
+    a.shortcut {
+	   font-size: 25pt;
+    }
+    
+    .footer {
+        font-size: 21pt;
+    }
+}
+
+/* For landscape-mode devices
+@media (min-width: 700px) and (orientation: landscape) {
+    body {
+        font-size: 13pt;
+    }
+    
+    #project-title {
+        font-size: 30pt;
+    }
+} */
