@@ -7,9 +7,9 @@
     <shortdesc xml:lang="en">badwolfie's developer web page on GitHub.</shortdesc>
 
     <description>Official web page for developer badwolfie, hosted by GitHub.</description>
-    
+
     <homepage rdf:resource="http://badwolfie.github.io" />
-    <license rdf:resource="http://spdx.org/licenses/GPL-2.0+" />
+    <license rdf:resource="http://spdx.org/licenses/GPL-3.0+" />
 
     <programming-language>HTML</programming-language>
     <programming-language>JavaScript</programming-language>
